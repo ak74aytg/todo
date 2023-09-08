@@ -61,6 +61,8 @@ export const logout = (req, res) => {
   res
     .cookie("token", null, {
       expires: new Date(Date.now()),
+      sameSite: "none",
+      secure:true
     })
     .send({
       success: true,
