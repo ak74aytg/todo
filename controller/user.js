@@ -10,6 +10,8 @@ const sendCookie = (user, res, message, status = 201) => {
     .cookie("token", token, {
       maxAge: 15 * 60 * 1000,
       httpOnly: true,
+      sameSite: "none",
+      secure:true
     })
     .send({
       success: true,
