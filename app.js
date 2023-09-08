@@ -20,8 +20,7 @@ app.use(cors({
     origin:[process.env.FRONTEND_URL],
     methods:["GET", "POST", "PUT", "DELETE"],
     credentials:true
-
-
+}))
 app.use('/api/v1/user', userRoutes);
 app.use('/api/v1/tasks', taskRoutes);
 
